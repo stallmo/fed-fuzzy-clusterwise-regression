@@ -1,2 +1,4 @@
 /.venv/
 /fed-fuzzy-clust-regression/fed_fuzzy_clust_regression/working_dir/
+__pycache__/
+notebooks/

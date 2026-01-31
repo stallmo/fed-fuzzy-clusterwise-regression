@@ -48,7 +48,7 @@ def load_data(partition_id: int, num_partitions: int, dataset_name: str, data_di
         assert path_to_data is not None, f"Dataset {dataset_name} not found in data folder"
 
         # create the dataset from the dat file
-        ds = create_dataset_from_dat_file(path_to_data, test_size=0.2, seed=43)
+        ds = create_dataset_from_dat_file(path_to_data, test_size=0.2, seed=None)
         # Create FederatedDataset from the dataset
         partitioner = DirichletPartitioner(num_partitions=num_partitions, alpha=dirichlet_alpha, partition_by="label")
         if apply_preprocessing:
@@ -65,7 +65,7 @@ def load_data(partition_id: int, num_partitions: int, dataset_name: str, data_di
     X = dataset[feature_columns]
     y = dataset["target"]
 
-    # Split into train and validation sets by randomly selecting 10% of the data
+    # Split into train and validation sets by selecting 10% of the data
     X_train = X[:int(0.9 * len(X))]
     X_val = X[int(0.9 * len(X)):]
     y_train = y[:int(0.9 * len(y))]

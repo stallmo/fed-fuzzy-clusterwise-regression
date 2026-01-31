@@ -43,7 +43,7 @@ dataset-name = "abalone"
 dirichlet-alpha = 100.0
 # Preprocessing parameters
 test-size = 0.2
-apply-preprocessing = "True"
+apply-preprocessing = "False"
 clip-lower-q = 0.03 # tuned by optuna
 clip-upper-q = 0.97 # tuned by optuna
 # Cluster model parameters
@@ -51,8 +51,8 @@ num-clusters = 14 # tuned by optuna
 fuzzy-m = 2.1177118536403277 # tuned by optuna
 clust-tol-local = 1e-3
 clust-tol-global = 1e-3
-clust-max-iter-local = 10
-clust-max-iter-global = 100
+clust-max-iter-local = 100
+clust-max-iter-global = 1
 # Regression model parameters
 ridge-alpha = 6.239000823038692 # tuned by optuna
 
