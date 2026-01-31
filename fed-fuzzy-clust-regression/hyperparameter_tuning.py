@@ -12,7 +12,8 @@ RUN_TESTS_ONLY = False
 N_TRIALS = 50 # optuna trials for one study
 N_REPEAT_RUNS = 10 # repeat best run this many times to get stable estimate of performance
 DELETE_EXISTING = False # if True will delete existing runs and start fresh. Otherwise, will append to existing project
-DATA_DIR = "/Users/morris/code/fuzzy_clust_regression/data" # path to data directory containing .dat files
+this_dir = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(this_dir, "..", "data")
 
 DATASET_NAME = None # will be set (and updated) later
 DIRICHLET_ALPHA = None

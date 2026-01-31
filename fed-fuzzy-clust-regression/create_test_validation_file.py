@@ -7,20 +7,11 @@ if __name__ == '__main__':
     CLUST_MAX_ITER = 1
 
     # get all dataset names
-    data_dir = "/Users/morris/code/fuzzy_clust_regression/data"  # path to data directory containing .dat files
+    this_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(this_dir, "..", "data")  # path to data directory containing .dat files
     # Find all .dat files in DATA_DIR
     data_files = [f for f in os.listdir(data_dir) if f.endswith('.dat')]
     dataset_names = [os.path.splitext(f)[0] for f in data_files]
-    dataset_names = [
-        "wizmir",
-        "delta_elv",
-        "elevators",
-        "california",
-        "house",
-        "mortgage",
-        "wankara",
-        "treasury"
-    ]
     print(f"Found {len(data_files)} data files in {data_dir}")
 
     rows = []
