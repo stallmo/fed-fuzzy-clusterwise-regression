@@ -1,6 +1,5 @@
 # FedFCR — Federated Fuzzy Clusterwise Regression
 
-## 1\. Introduction
 This code accompanies the paper titled _A Practical Framework for Federated Fuzzy Clusterwise Regression, Preprocessing and Hyperparameter Tuning_. It implements the experiments described in the paper for both non\-IID and IID federated learning scenarios.
 
 Key components:
@@ -8,7 +7,7 @@ Key components:
 - Preprocessing utilities and reproducible experiment configs
 - Hyperparameter tuning driver that runs experiments and logs everything to Weights & Biases (W&B)
 
-## 2\. The core method (FedFCR)
+## The core method (FedFCR)
 FedFCR proceeds in two main stages:
 
 1. Federated fuzzy c\-means clustering:
@@ -22,7 +21,7 @@ FedFCR proceeds in two main stages:
 
 This combination yields a model ensemble aligned with fuzzy cluster memberships and designed for federated settings.
 
-## 3\. How to run
+## How to run
 Prerequisites:
 - Python 3.9+ and project dependencies installed (see project `pyproject.toml`)
 - Flower framework installed (used for running federated experiments)
@@ -54,7 +53,7 @@ wandb login
 python3 fed-fuzzy-clust-regression/hyperparameter_tuning.py
 ```
 
-## 4.Results
+## Results
 * All results are stored on Weights & Biases under the project names fed-fuzzy-clust-regression-<dataset>.
 * Inspect experiment runs and analytics on the W&B web UI after experiments conclude.
 
