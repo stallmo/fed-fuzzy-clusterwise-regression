@@ -1,6 +1,6 @@
 # FedFCR — Federated Fuzzy Clusterwise Regression
 
-This code accompanies the paper titled _A Practical Framework for Federated Fuzzy Clusterwise Regression, Preprocessing and Hyperparameter Tuning_ (submitted to WCCI / FUZZ-IEEE 2026). 
+This code accompanies the paper titled _A Practical Framework for Federated Fuzzy Clusterwise Regression, Preprocessing and Hyperparameter Tuning_ (accepted at WCCI / FUZZ-IEEE 2026). 
 It implements the framework and experiments described in the paper for both non\-IID and IID federated learning scenarios.
 
 Key components:
